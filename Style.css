@@ -1,0 +1,609 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+.overlay:target
+{
+    display: block;
+}
+.window
+{
+    WIDTH: 800px;
+    height: 500px;
+    left: 50%;
+    z-index: 12;
+    margin: 0;
+    position: fixed;
+    border: 1px solid #383738;
+    border-radius: 15px;
+    -webkit-box-shadow: 0 13px 21px rgba(0,1,0,.19), 0 21px 63px rgba(0,1,0,.31);
+    box-shadow: 0 13px 21px rgba(0,1,0,.19), 0 21px 63px rgba(0,1,0,.31);
+    -webkit-transform: translate(-50%, -450%);
+    -ms-transform: translate(-50%, -450%);
+    transform: translate(-50%, -450%);
+    -webkit-transition: -webkit-transform 0.6s ease-out;
+    transition: -webkit-transform 0.6s ease-out;
+    -o-transition: transform 0.6s ease-out;
+    transition: transform 0.6s ease-out;
+    transition: transform 0.6s ease-out, -webkit-transform 0.6s ease-out;
+    background-color: rgb(0, 0, 0, 0.2);
+    color: white;
+}
+.bg{
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    opacity: .8;
+    border-radius: 15px;
+}
+.overlay:target+.window
+{
+    -webkit-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+    top: 20%;
+}
+#button
+{
+    font-size: 33px;
+    border-radius: 11px;
+    background-color: rgba(63, 63, 63, 0.9);
+    -webkit-box-shadow: 0 3px 10px #010;
+    box-shadow: 0 3px 10px #010;
+    text-align: center;
+    text-decoration: none;
+    background: #DCDCDC;
+    padding: 6px 17px;
+}
+*{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+html, body{
+    height: 100%;
+}
+body{
+    font-family: 'Roboto Light', serif;
+}
+main{
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.wrapper
+{
+    display: block;
+    width: 100%;
+    min-height: 100%;
+    margin: 0px auto;
+    position: relative;
+    overflow: hidden;
+}
+video
+{
+    width: 100%;
+    min-height: 100%;
+    text-align: center;
+}
+.bgvideo
+{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: 100%;
+    height: auto;
+    z-index: -9999;
+}
+.game-quiz-container
+{
+    z-index: 13;
+    width: 100%;
+    height: 100%;
+    background-color: inherit;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    border-radius: 15px;
+    color: white;
+    background-image: inherit;
+}
+
+.game-details-container{
+    width: 80%;
+    height: 4rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.game-details-container h1{
+    font-size: inherit;
+    text-shadow: inherit;
+}
+.game-question-container{
+    width: 80%;
+    height: 8rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    border: 2px solid darkgray;
+    border-radius: 25px;
+}
+.game-question-container h1{
+    font-size: inherit;
+    text-align: center;
+    padding: 3px;
+    text-shadow: inherit;
+}
+.game-options-container{
+    width: 85%;
+    height: 16rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+}
+.game-options-container span{
+    width: 45%;
+    height: 6rem;
+    border: 2px solid darkgray;
+    border-radius: 20px;
+    overflow: hidden;
+}
+span label {
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    cursor: pointer;
+    -webkit-transition: -webkit-transform 0.3s;
+    transition: -webkit-transform 0.3s;
+    -o-transition: transform 0.3s;
+    transition: transform 0.3s;
+    transition: transform 0.3s, -webkit-transform 0.3s;
+    color: white;
+}
+span label:hover{
+    -ms-transform: scale(1.01);
+    -webkit-transform: scale(1.01);
+    transform: scale(1.01);
+}
+input[type="radio"] {
+    position: relative;
+    display: none;
+}
+input[type=radio]:checked ~ .option {
+    background: darkgreen;
+}
+.button-container{
+    width: 50%;
+    height: 3rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: left;
+    -ms-flex-pack: left;
+    justify-content: left;
+    z-index: 1;
+}
+.button-container button{
+    width: inherit;
+    height: inherit;
+    border-radius: 10px;
+    background: none;
+    color: white;
+    border: 2px solid gray;
+    cursor: pointer;
+    outline: none;
+    font-size: inherit;
+    text-shadow: inherit;
+    margin-left:5px;
+}
+.button-container button:before{
+    background-color: rgba(0,0,0,0);
+}
+.button-container button:after{
+    background-color: rgb(143, 93, 93);
+}
+.button-container button:hover{
+    background-color: rgb(143, 93, 93);
+}
+.modal-container{
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-animation: fadeIn 1.2s ease-in-out;
+    animation: fadeIn 1.2s ease-in-out;
+    border-radius: 15px;
+    z-index: 2;
+}
+.modal-content-container{
+    height: 25rem;
+    width: 30rem;
+    background-color: rgb(43, 42, 42);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    border-radius: 25px;
+}
+.modal-content-container h1{
+    font-size: 1.3rem;
+    height: 3rem;
+    color: lightgray;
+    text-align: center;
+}
+.grade-details{
+    width: 15rem;
+    height: 10rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    font-size: inherit;
+    text-shadow: inherit;
+}
+.grade-details p{
+    color: white;
+    text-align: center;
+    font-size: inherit;
+    text-shadow: inherit;
+}
+.modal-button-container{
+    height: 2rem;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+.modal-button-container button{
+    width: 10rem;
+    height: 2rem;
+    background: none;
+    outline: none;
+    border: 1px solid rgb(252, 242, 241);
+    color: white;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border-radius: 20px;
+}
+.modal-button-container button:hover{
+    background-color: rgb(83, 82, 82);
+    -ms-transform: scale(1.12);
+    -webkit-transform: scale(1.12);
+    transform: scale(1.12);
+}
+
+.modal-show-content-container{
+    height: 90%;
+    width: 90%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    border-radius: 25px;
+}
+img{
+    border-radius: 10px;
+}
+/* Просьба перевернуть экран */
+@media (orientation: portrait) {
+    html, body {
+        background-color: black;
+        height: 100%;
+        width: 100%;
+        display: block;
+    }
+    #button{
+        opacity: 0;
+        pointer-events: none;
+    }
+    .window
+    {
+        opacity: 0;
+        pointer-events: none;
+    }
+    .wrapper{
+        background-color: black;
+    }
+    .phone {
+        position: fixed;
+        z-index: 100;
+        top: 35%;
+        text-align: inherit;
+        height: 350px;
+        width: 700px;
+        border: 3px solid white;
+        border-radius: 10px;
+        -webkit-animation: rotate 1.5s ease-in-out infinite alternate;
+        animation: rotate 1.5s ease-in-out infinite alternate;
+    }
+    @-webkit-keyframes rotate {
+        0% {
+            -webkit-transform: rotate(0deg);
+            transform: rotate(0deg)
+        }
+        50% {
+            -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg)
+        }
+        100% {
+            -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg)
+        }
+    }
+    @keyframes rotate {
+        0% {
+            -webkit-transform: rotate(0deg);
+            transform: rotate(0deg)
+        }
+        50% {
+            -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg)
+        }
+        100% {
+            -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg)
+        }
+    }
+    /* здесь можно сделать видимой какую-нибудь подсказку, в которой предложить повернуть устройство.*/
+}
+/* Smartphones (вертикальная и горизонтальная ориентация) ----------- */
+@media only screen and (min-width : 320px) and (max-width : 480px) {
+    /* стили */
+}
+
+/* Smartphones (горизонтальная) ----------- */
+@media only screen and (min-width: 321px) {
+    /* стили */
+}
+
+/* Smartphones (вертикальная) ----------- */
+@media only screen and (max-width: 320px) {
+    /* стили */
+}
+
+/* iPads (вертикальная и горизонтальная) ----------- */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    /* стили */
+}
+
+/* iPads (горизонтальная) ----------- */
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    /* стили */
+}
+
+/* iPads (вертикальная) ----------- */
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    /* стили */
+}
+
+/* iPad 3**********/
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+    .window{
+        width: 650px;
+        height: 350px;
+        font-size: 1.2rem;
+    }
+    .overlay:target+.window
+    {
+        top: 17%;
+    }
+}
+/*
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+    !* стили *!
+}
+*/
+
+/* Настольные компьютеры и ноутбуки ----------- */
+@media only screen  and (min-width: 1224px) {
+    .window{
+        width: 1100px;
+        height: 550px;
+        font-size: 2rem;
+    }
+    .overlay:target+.window
+    {
+        font-size: 1.5rem;
+        top: 20%;
+    }
+}
+
+/* Большие экраны ----------- */
+@media only screen  and (min-width: 1824px) {
+    .window{
+        width: 1400px;
+        height: 700px;
+        font-size: 2rem;
+    }
+    .overlay:target+.window
+    {
+        top: 15%;
+    }
+}
+
+/* iPhone 4 ----------- */
+@media only screen and (min-width: 320px) and (max-width: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* iPhone 5 ----------- */
+@media only screen and (min-width: 320px) and (max-height: 568px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2){
+    /* стили */
+}
+@media only screen and (min-width: 320px) and (max-height: 568px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2){
+    /* стили */
+}
+
+/* iPhone 6 ----------- */
+@media only screen and (min-width: 375px) and (max-height: 667px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2){
+    /* стили */
+}
+@media only screen and (min-width: 375px) and (max-height: 667px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2){
+    /* стили */
+}
+
+/* iPhone 6+ ----------- */
+@media only screen and (min-width: 414px) and (max-height: 736px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2){
+    .window{
+        width: 650px;
+        height: 350px;
+        font-size: 1.1rem;
+    }
+    .overlay:target+.window
+    {
+        top: 25%;
+    }
+
+}
+@media only screen and (min-width: 736px) and (min-height: 413px)and (orientation: landscape) and (-webkit-device-pixel-ratio: 2){
+    .window{
+        width: 650px;
+        height: 350px;
+        font-size: 1.1rem;
+    }
+    .overlay:target+.window
+    {
+        top: 17%;
+    }
+}
+@media only screen and (min-width: 736px) and (min-height: 375px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2){
+    .window{
+        width: 650px;
+        height: 350px;
+        font-size: 1.1rem;
+    }
+    .overlay:target+.window
+    {
+        top: 15%;
+    }
+}
+/* Samsung Galaxy S3 ----------- */
+@media only screen and (min-width: 320px) and (max-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2){
+    /* стили */
+}
+@media only screen and (min-width: 320px) and (max-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2){
+    /* стили */
+}
+
+/* Samsung Galaxy S4 ----------- */
+@media only screen and (min-width: 320px) and (max-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3){
+    /* стили */
+}
+@media only screen and (min-width: 320px) and (max-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3){
+    /* стили */
+}
+
+/* Samsung Galaxy S5 ----------- */
+@media only screen and (min-width: 360px) and (max-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3){
+    /* стили */
+}
+@media only screen and (min-width: 360px) and (max-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3){
+    /* стили */
+}
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+}
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}

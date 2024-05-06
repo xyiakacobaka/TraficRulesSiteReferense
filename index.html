@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="./Style.css">
+</head>
+<body onload="NextQuestion(0)">
+    <main>
+        <div class="phone"></div>
+            <a href="#b" id="button" style="color: #001100">Нажми на меня</a>
+            <a href="#x" class="overlay" id="b"></a>
+            <div class="window" id="window">
+                <div class="bg" id="bg"></div>
+                <div class="modal-container" id="score-modal">
+                    <div class="modal-content-container">
+                        <h1>Поздравляем, Викторина завершена.</h1>
+                        <div class="grade-details">
+                            <p>Вопросов : 10</p>
+                            <p>Неправильных ответов : <span id="wrong-answers"></span></p>
+                            <p>Правильных ответов : <span id="right-answers"></span></p>
+                            <p>Соотношение : <span id="grade-percentage"></span>%</p>
+                            <p><span id="remarks"></span></p>
+                        </div>
+                        <div class="modal-button-container">
+                            <button onclick="closeScoreModal()">Закрыть</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="game-quiz-container" id="game-quiz-container">
+                    <div class="game-details-container">
+                        <h1>Счет : <span id="player-score"></span> / 10</h1>
+                        <h1> Вопрос : <span id="question-number"></span></h1>
+                    </div>
+                    <div class="game-question-container">
+                        <h1 id="display-question"></h1>
+                    </div>
+                    <div class="game-options-container">
+                        <div class="modal-container" id="option-modal">
+                            <div class="modal-content-container">
+                                <h1>Пожалуйста выберите ответ</h1>
+                                <div class="modal-button-container">
+                                    <button onclick="closeOptionModal()" style="z-index: 9999">Закрыть окно</button>
+                                </div>
+                            </div>
+                        </div>
+                        <span>
+                                <input type="radio" id="option-one" name="option" class="radio" value="optionA" />
+                                <label for="option-one" class="option" id="option-one-label"></label>
+                        </span>
+                        <span>
+                                <input type="radio" id="option-two" name="option" class="radio" value="optionB"/>
+                                <label for="option-two" class="option" id="option-two-label"></label>
+                        </span>
+                        <span>
+                                <input type="radio" id="option-three" name="option" class="radio" value="optionC" />
+                                <label for="option-three" class="option" id="option-three-label"></label>
+                        </span>
+                        <span>
+                                <input type="radio" id="option-four" name="option" class="radio" value="optionD" />
+                                <label for="option-four" class="option" id="option-four-label"></label>
+                        </span>
+                    </div>
+                    <div class="button-container" style="justify-content: center;">
+                        <button onclick="handleNextQuestion()" style="z-index: 1;" id="next">Ответить</button>
+                    </div>
+                </div>
+            </div>
+    </main>
+<div class="wrapper">
+    <video autoplay loop muted class="bgvideo" id="bgvideo">
+        <source src="WhatsApp%20Video%202024-03-25%20at%2008.45.06.mp4" type="video/mp4">
+    </video>
+</div>
+</body>
+</html>
+<script src="./Quiz_Q&A.js"> </script>
